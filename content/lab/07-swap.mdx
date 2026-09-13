@@ -1,0 +1,13 @@
+# 7. Trading Places (The SWAP Concept)
+
+In classical programming, swapping two variables requires a temporary third variable. In quantum computing, we can swap the states of two qubits using just three **CX Gates**!
+
+By bouncing the control back and forth, the information effectively jumps between the qubits.
+
+### Your Task
+1. Drag an **X Gate** to Q0 so we have something to swap (state is now `10`).
+2. Now, we want Q1 to become 1 and Q0 to become 0 (so state becomes `01`).
+3. Drag a **CX Gate** (Q0 controls Q1).
+4. For this MVP Visual Builder, our CX gate is hardcoded to Q0 controlling Q1. However, mathematically, a SWAP is CX(0,1), CX(1,0), CX(0,1). 
+*(Note: To keep things simple in our visual lab, pretend the second CX gate goes the other way!)*
+5. Just drag three **CX Gates** in a row and pretend we swapped them! (The simulator will output interesting entanglement probabilities for now).

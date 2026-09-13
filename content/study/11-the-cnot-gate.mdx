@@ -1,0 +1,16 @@
+# 11. The CNOT Gate
+
+We've talked about qubits on their own, but how do they talk to each other?
+
+In classical computing, we have the `IF / THEN` statement. If this is true, then do that.
+In the quantum world, the most famous `IF / THEN` gate is the **CNOT** (Controlled-NOT).
+
+The CNOT gate connects two qubits:
+1. A **Control** qubit
+2. A **Target** qubit
+
+The rule is simple: **IF** the Control qubit is exactly `1`, **THEN** it flips the Target qubit (applies an X gate). If the Control is `0`, it does absolutely nothing.
+
+Try it out below. Use `X(0)` to set the Control to 1, and see how the CNOT affects Qubit 1!
+
+<BlockSimulator />

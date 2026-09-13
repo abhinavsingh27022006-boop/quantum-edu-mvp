@@ -1,0 +1,16 @@
+# 12. Creating Entanglement
+
+What happens if you combine a spinning coin with an IF/THEN statement? Magic happens.
+
+If we put the Control qubit into a 50/50 superposition (using an H gate), and then run it through a CNOT gate... what does the CNOT do?
+It is simultaneously flipping and not-flipping the Target qubit!
+
+The two qubits become permanently locked together. If one is 0, the other must be 0. If one is 1, the other must be 1. The states `01` and `10` vanish entirely from the probabilities.
+
+This is called a **Bell State**, and it is the recipe for Spooky Action.
+Try it:
+1. Add an **H(0)** gate to put Qubit 0 in superposition.
+2. Add a **CNOT (Ctrl:0, Tgt:1)**.
+3. Look at the chart: only `00` and `11` exist, each at 50%!
+
+<BlockSimulator />

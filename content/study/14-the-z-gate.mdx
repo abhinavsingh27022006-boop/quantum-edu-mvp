@@ -1,0 +1,14 @@
+# 14. The Z Gate (Phase Flip)
+
+The **Pauli-Z Gate** (or **Z Gate**) is the strangest of the three Pauli gates.
+
+If you apply a Z gate to a qubit that is resting at 0, absolutely nothing happens.
+If you apply a Z gate to a qubit that is resting at 1, the probability chart still says it's 100% at 1.
+
+So what does it do? It's an invisible mirror. 
+
+The Z gate flips the **sign** (or phase) of the 1 state. It turns a `+1` into a `-1`. Since probabilities are calculated by squaring the amplitude (and a negative number squared is still positive!), the chart doesn't change. 
+
+But this hidden negative sign is the secret weapon of quantum computing, as we'll see in the next session on Interference. Try it below: applying a Z does nothing to the chart!
+
+<BlockSimulator />

@@ -1,0 +1,14 @@
+# 24. Superdense Coding
+
+Teleportation uses two classical bits to send one quantum bit. 
+What if we do the exact opposite?
+
+**Superdense Coding** allows Alice to send *two* classical bits of information (like `10` or `11`) to Bob, by sending him only *one* single physical qubit!
+
+How? Again, they must share an entangled pair first.
+Alice takes her qubit, and depending on the two-bit message she wants to send, she applies either nothing, an X gate, a Z gate, or both (X and Z) to her single qubit. 
+
+She then puts her single qubit in a box and mails it to Bob. 
+Bob receives the qubit, runs it through a CNOT and an H gate with his entangled half, and measures both. Magically, the two classical bits Alice wanted to send pop out! 
+
+By manipulating the quantum phase of an entangled pair, one physical particle can carry twice as much data as classically allowed.

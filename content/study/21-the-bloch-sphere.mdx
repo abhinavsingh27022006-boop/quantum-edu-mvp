@@ -1,0 +1,17 @@
+# 21. The Bloch Sphere
+
+The mathematical rules of quantum mechanics guarantee that a single qubit can always be perfectly mapped to a point on the surface of a 3D sphere.
+
+Physicists call this the **Bloch Sphere**.
+- The North Pole is `|0>`.
+- The South Pole is `|1>`.
+- The Equator is a perfect 50/50 superposition.
+
+When we apply quantum gates like X, Y, and Z, we are literally grabbing this 3D sphere and rotating it! 
+- An **X Gate** rotates the sphere 180 degrees around the X-axis (flipping North to South).
+- A **Z Gate** rotates the sphere 180 degrees around the Z-axis (spinning it like a top, changing the phase).
+- An **H Gate** rotates the sphere diagonally, shifting the poles to the equator.
+
+Try clicking the gates below and watch the state vector rotate!
+
+<BlochSphere />

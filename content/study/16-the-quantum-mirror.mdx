@@ -1,0 +1,15 @@
+# 16. The Quantum Mirror
+
+Let's put the Z gate to work to see interference in action!
+
+If we put a qubit in superposition with an H gate, it becomes a mix of `0` and `1`.
+If we apply another H gate right after, it neatly reverses back to `100% 0`.
+
+But watch what happens if we slip a Z gate in the middle!
+1. Add an **H(0)** gate (creates a mix of `+0` and `+1`).
+2. Add a **Z(0)** gate (flips the sign of the 1 state, so we now have `+0` and `-1`).
+3. Add a final **H(0)** gate.
+
+Because of the negative sign created by the Z gate, the final H gate creates waves that *destructively interfere* with the 0 state, and *constructively interfere* with the 1 state! The result? A perfect 100% flip to `1`, using only mirrors and superposition.
+
+<BlockSimulator />

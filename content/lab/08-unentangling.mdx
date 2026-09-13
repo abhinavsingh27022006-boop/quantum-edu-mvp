@@ -1,0 +1,9 @@
+# 8. Un-entangling
+
+Quantum operations are unitary, which is a fancy word meaning they are completely reversible! If you can entangle two qubits, you can un-entangle them just by applying the exact reverse operations in the reverse order.
+
+### Your Task
+1. First, create an entangled state (Bell State): Drag an **H Gate** to Q0, then a **CX Gate** (Q0 controls Q1).
+2. If you run the simulation now, you will see a 50/50 split between `00` and `11`. They are entangled.
+3. Now, un-entangle them: Apply the reverse. Since CX is its own reverse, and H is its own reverse, just drag another **CX Gate**, followed by another **H Gate** on Q0.
+4. Run the simulation. You've completely reversed the entanglement and returned to exactly 100% `00`!

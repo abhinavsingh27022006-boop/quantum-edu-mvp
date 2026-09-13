@@ -1,0 +1,13 @@
+# 18. The SWAP Concept
+
+Sometimes in a quantum computer, two qubits that need to talk to each other are physically too far apart on the chip.
+
+To solve this, we can swap their states! 
+If Qubit 0 is holding a precious quantum state, and we want to move it to Qubit 1, we don't need a special teleportation device (yet).
+
+We can build a **SWAP Gate** entirely out of three alternating CNOT gates.
+1. CNOT (Control 0, Target 1)
+2. CNOT (Control 1, Target 0)
+3. CNOT (Control 0, Target 1)
+
+This beautiful symmetry perfectly exchanges whatever state was in Q0 with whatever state was in Q1, allowing information to ripple across the quantum chip.

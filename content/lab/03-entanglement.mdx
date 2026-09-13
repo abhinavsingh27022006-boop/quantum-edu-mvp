@@ -1,0 +1,15 @@
+# Spooky Action at a Distance
+
+Einstein famously called **Entanglement** "spooky action at a distance." Imagine having two magical coins. When you flip one coin and it lands on heads, the other coin instantly lands on heads too, no matter how far apart they are!
+
+To entangle two qubits, we use a combination of the **H Gate** and the **CNOT Gate** (Controlled-NOT, or **CX Gate**).
+
+The **CX Gate** links two qubits: a *control* and a *target*. If the control qubit is a `1`, it flips the target. If the control is `0`, it does nothing. But what happens if the control qubit is *spinning* in superposition?
+
+### Your Task
+Let's entangle Qubit 0 and Qubit 1!
+1. Drag the **H Gate** onto **Qubit 0** to make it spin.
+2. Drag the **CX Gate** onto **Qubit 1**. (It will automatically use Qubit 0 as the control).
+3. Click **Run Simulation**. 
+
+Look at the results! You will measure `00` (both tails) and `11` (both heads) with a 50/50 chance. But you will **never** see `01` or `10`. The qubits are completely linked!

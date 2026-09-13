@@ -1,0 +1,13 @@
+# 28. Grover's Amplification
+
+How does Grover's Algorithm search so fast?
+
+First, it uses H gates to put a bunch of qubits into a massive superposition of *every possible answer*. 
+Then, it asks a quantum black box to find the one correct answer. 
+
+But instead of pulling out the answer, the black box just marks it with a negative sign (using a Phase Flip, just like our Z gate!).
+Now we have a giant wave of probabilities, and the one correct answer is upside down.
+
+Next, Grover's algorithm performs an operation called "Amplitude Amplification." It acts like a funhouse mirror. It takes the average of all the waves, and flips them around the average. Because the correct answer was upside down, it suddenly gets much taller, and all the wrong answers get much shorter (destructive interference).
+
+By repeating this a few times, the correct answer's probability grows to nearly 100%! When we measure the qubits, the correct answer pops out.
