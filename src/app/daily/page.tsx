@@ -18,7 +18,15 @@ import {
 import confetti from 'canvas-confetti';
 import { Trophy, CalendarCheck } from 'lucide-react';
 
-const DAILY_CHALLENGES = [
+interface DailyChallenge {
+  day: string;
+  title: string;
+  description: string;
+  qubits: number;
+  target: Record<string, number>;
+}
+
+const DAILY_CHALLENGES: DailyChallenge[] = [
   {
     day: "Sunday",
     title: "Quantum Entanglement",
