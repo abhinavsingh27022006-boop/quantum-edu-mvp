@@ -43,14 +43,16 @@ export default async function LessonPage({
         </div>
       }
       right={
-        <div className="flex flex-col gap-6 h-full w-full overflow-hidden">
-          <VisualBuilder />
+        <div className="flex flex-col gap-6 w-full pb-12">
+          <div className="min-h-[24rem]">
+            <VisualBuilder />
+          </div>
           
-          <div className="flex-1 flex flex-col overflow-hidden">
+          <div className="min-h-[24rem]">
             <CodeEditor />
           </div>
           
-          <div className="flex-1 flex flex-col overflow-hidden">
+          <div className="min-h-[24rem]">
             <Simulator />
           </div>
         </div>

@@ -8,11 +8,11 @@ export function SplitPane({
   right: React.ReactNode;
 }) {
   return (
-    <div className="flex h-screen w-full bg-transparent overflow-hidden text-zinc-100">
-      <div className="w-1/2 h-full overflow-y-auto border-r border-white/10 p-8 custom-scrollbar">
+    <div className="flex flex-col md:flex-row w-full min-h-[calc(100vh-4rem)] bg-transparent text-zinc-100">
+      <div className="w-full md:w-1/2 p-8 border-b md:border-b-0 md:border-r border-white/10">
         {left}
       </div>
-      <div className="w-1/2 h-full overflow-y-auto bg-black/20 p-8 custom-scrollbar relative flex flex-col">
+      <div className="w-full md:w-1/2 bg-black/20 p-8 flex flex-col gap-6">
         {right}
       </div>
     </div>

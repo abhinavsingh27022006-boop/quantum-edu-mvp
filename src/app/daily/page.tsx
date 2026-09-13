@@ -185,11 +185,11 @@ export default function DailyChallengePage() {
   }
 
   return (
-    <div className="w-full h-[calc(100vh-4rem)] flex flex-col bg-[#0B0D17] relative overflow-hidden">
-      <div className="flex-1 flex gap-6 p-6 relative z-10 w-full h-full overflow-hidden">
+    <div className="w-full min-h-[calc(100vh-4rem)] flex flex-col bg-[#0B0D17] relative">
+      <div className="flex-1 flex flex-col xl:flex-row gap-6 p-6 relative z-10 w-full">
         
         {/* Left Side: Builder */}
-        <div className="flex-[3] h-full overflow-hidden flex flex-col relative">
+        <div className="flex-[3] w-full min-h-[24rem] relative">
           
           {/* Challenge Banner */}
           <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 border border-purple-500/30 rounded-xl p-6 mb-6 shadow-lg backdrop-blur-md">
@@ -202,12 +202,12 @@ export default function DailyChallengePage() {
 
           {/* Success Overlay */}
           {success && (
-            <div className="absolute inset-0 bg-black/80 backdrop-blur-sm z-50 rounded-xl flex flex-col items-center justify-center">
-              <Trophy className="w-20 h-20 text-yellow-400 mb-6" />
-              <h2 className="text-3xl font-bold text-white mb-8">Target Matched!</h2>
+            <div className="absolute inset-0 bg-black/80 backdrop-blur-sm z-50 rounded-xl flex flex-col items-center justify-center p-4 text-center">
+              <Trophy className="w-16 h-16 md:w-20 md:h-20 text-yellow-400 mb-6" />
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">Target Matched!</h2>
               <button 
                 onClick={handleClaim}
-                className="px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-full shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-all hover:scale-105 text-lg"
+                className="px-6 py-3 md:px-8 md:py-4 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-full shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-all hover:scale-105 text-base md:text-lg"
               >
                 Claim Daily Reward (500 XP)
               </button>
@@ -216,24 +216,26 @@ export default function DailyChallengePage() {
         </div>
 
         {/* Right Side: Target Chart */}
-        <div className="flex-[2] h-full flex flex-col bg-black/40 border border-white/10 rounded-xl p-4 shadow-xl backdrop-blur-sm">
+        <div className="flex-[2] w-full min-h-[24rem] flex flex-col bg-black/40 border border-white/10 rounded-xl p-4 shadow-xl backdrop-blur-sm">
           <h3 className="text-zinc-100 font-bold mb-6">Target State Matcher</h3>
           
-          <div className="flex-1 w-full h-full">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={chartData} margin={{ top: 20, right: 20, left: -20, bottom: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#27272a" opacity={0.5} />
-                <XAxis dataKey="state" stroke="#71717a" />
-                <YAxis stroke="#71717a" tickFormatter={(value) => value + '%'} />
-                <Tooltip 
-                  contentStyle={{ backgroundColor: 'rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', borderRadius: '8px' }}
-                  formatter={(value: any) => [value + '%']}
-                />
-                <Legend />
-                <Bar dataKey="Target" fill="#71717a" opacity={0.5} radius={[4, 4, 0, 0]} />
-                <Bar dataKey="YourCircuit" fill="#a855f7" radius={[4, 4, 0, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
+          <div className="flex-1 w-full h-full overflow-x-auto custom-scrollbar">
+            <div className="min-w-[400px] h-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={chartData} margin={{ top: 20, right: 20, left: -20, bottom: 0 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#27272a" opacity={0.5} />
+                  <XAxis dataKey="state" stroke="#71717a" />
+                  <YAxis stroke="#71717a" tickFormatter={(value) => value + '%'} />
+                  <Tooltip 
+                    contentStyle={{ backgroundColor: 'rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', borderRadius: '8px' }}
+                    formatter={(value: any) => [value + '%']}
+                  />
+                  <Legend />
+                  <Bar dataKey="Target" fill="#71717a" opacity={0.5} radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="YourCircuit" fill="#a855f7" radius={[4, 4, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           </div>
         </div>
 

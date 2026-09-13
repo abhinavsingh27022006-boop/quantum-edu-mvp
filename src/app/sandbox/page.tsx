@@ -27,7 +27,7 @@ function SandboxContent() {
   }, [searchParams, loadCircuit]);
 
   return (
-    <div className="w-full h-[calc(100vh-4rem)] flex flex-col bg-[#0B0D17] relative overflow-hidden">
+    <div className="w-full min-h-[calc(100vh-4rem)] flex flex-col bg-[#0B0D17] relative">
       <TourGuide />
       
       {/* Grid Pattern Background */}
@@ -43,19 +43,19 @@ function SandboxContent() {
       />
 
       {/* Main Content Area */}
-      <div className="flex-1 flex gap-6 p-6 relative z-10 w-full h-full overflow-hidden">
+      <div className="flex-1 flex flex-col xl:flex-row gap-6 p-6 relative z-10 w-full">
         
-        {/* Left Side: Visual Builder (Takes up more space) */}
-        <div className="flex-[3] h-full overflow-hidden flex flex-col">
+        {/* Left Side: Visual Builder */}
+        <div className="flex-[3] w-full min-h-[24rem]">
           <VisualBuilder />
         </div>
 
         {/* Right Side: Code & Simulation */}
-        <div className="flex-[2] h-full flex flex-col gap-6 overflow-hidden">
-          <div className="flex-[1] overflow-hidden">
+        <div className="flex-[2] w-full flex flex-col gap-6">
+          <div className="min-h-[24rem] w-full">
             <CodeEditor />
           </div>
-          <div className="flex-[1] overflow-hidden">
+          <div className="min-h-[24rem] w-full">
             <Simulator />
           </div>
         </div>
